@@ -1,6 +1,12 @@
 from typing import List, Optional, Dict, Any
 import uuid
 import time
+import sys
+import os
+
+# Add parent directory to Python path to access utils
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), '..'))
+
 from models.article import Article
 from utils.redis_client import redis_client
 from config import Config
